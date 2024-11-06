@@ -194,7 +194,7 @@ int bitCount(int x)
  */
 int bang(int x)
 {
-  return 2;
+  return (( x | (~x + 1)) >> 31) + 1;
 }
 /*
  * tmin - return minimum two's complement integer
@@ -204,7 +204,7 @@ int bang(int x)
  */
 int tmin(void)
 {
-  return 2;
+  return 1<<31;
 }
 /*
  * fitsBits - return 1 if x can be represented as an
